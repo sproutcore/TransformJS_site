@@ -555,7 +555,7 @@ code {
   text-align: center;
   float: left;
   width:319px;
-  height: 100px;
+  height: 130px;
 }
 
 #sections .section:first-child {
@@ -567,13 +567,17 @@ code {
   font-weight: bold;
 }
 
+#sections .section p {
+  text-align: left;
+}
+
 #demobox #code {
   float: left;
-  width: 350px;
+  width: 450px;
 }
 
 #demobox #preview {
-  margin-left: 360px;
+  margin-left: 460px;
   padding: 10px;
   background: #f3f3f3;
 }
