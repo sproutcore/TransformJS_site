@@ -10,13 +10,15 @@ title: TransformJS - 3D and 2D Transforms
   <div class="section">
     <h4><a href="http://www.github.com/sproutcore/transformjs/downloads">Download</a></h4>
     <p>
-      Download current and previous versions of TransformJS 
+      Download current and previous versions of TransformJS, feel free
+to fork and/or clone the repository as well. 
     </p>
   </div>
   <div class="section">
     <h4><a href="http://www.github.com/sproutcore/transformjs/issues">Report Bugs</a></h4>
     <p>
-      Download current and previous versions of TransformJS 
+      TransformJS is currently in beta. If you encounter any odd
+behavior or have suggestions for improving the API, please let us know. 
     </p>
   </div>
 </div>
@@ -29,7 +31,7 @@ title: TransformJS - 3D and 2D Transforms
       $(document).ready(function() {
         $('#forward').click(function() {
           $('#test').animate({
-            translateX:'+=150',
+            translateX:'-=150',
             translateY:'+=150',
             scale:'+=2',
             rotateY: '+=6.24',
@@ -40,7 +42,7 @@ title: TransformJS - 3D and 2D Transforms
 
         $('#backward').click(function() {
           $('#test').animate({
-            translateX:'-=150',
+            translateX:'+=150',
             translateY:'-=150',
             scale:'-=2',
             rotateY: '-=6.24',
@@ -53,21 +55,23 @@ title: TransformJS - 3D and 2D Transforms
   </div>
   <div id="preview">
     <button id="forward" class="btn large">Run Animation Forward</button>
-    <button id="backward" class="btn large">Run Animation backwards</button>
+    <button id="backward" class="btn large">Run Animation Back</button>
     <img id="test" src="images/demo.jpg">
+    <h6>Photo Credit to <a
+href="http://www.flickr.com/photos/mikebehnken/4998169342/">MikeBehnken</a></h6>
   </div>
 </div>
 
 ## Overview
 
-  CSS Transforms allow you to specify 2D or 3D transformations where
-available to an HTML element. They are commonly used to add effects to
-elements and also commonly used with transitions. They were first
-introduced in WebKit in 2007, and have now reached mass-adoption by all
-the major browswer vendors. 
+  CSS Transforms  were first introduced in WebKit in 2007, and have now 
+reached mass-adoption by all the major browswer vendors. This is great news 
+for web developers, especially in the case of 3D transforms which are
+hardware-accelerated, resulting in extremely smooth animations and
+responsive applications. 
 
-  The API however, does not scale to complex applications which require 
-intricate and complex management of transformations. TransformJS
+  The API for applying transforms however, does not scale to complex applications 
+which require intricate and complex management of transformations. TransformJS
 attempts to identify and address these problems, allowing developers to
 make use of transforms without having to be encumbered by cross browser
 issues, and low-level APIs.
@@ -86,18 +90,14 @@ and animate the changes:
     },1500);    
   </javascript>
 
-  `Note:` 3D properties do not work in browsers that do not support them, 
-and TransformJS will only apply 2D properties. See the "Browser Support"
-section for more information.
-
 ## Browser Support
 
   TransformJS supports all major browsers: Safari, Chrome, Firefox,
-and IE. However, since all browsers don't share the same featureset,
+Opera, and IE. However, since all browsers don't share the same featureset,
 TransformJS will make its best attempt at using the best feature
 available. The table below outlines which properties are supported on
-which browser. If a property is supported on more than one browser, 3d
-will be prefered to 2d, and 2d will be prefered to filter transforms.
+which browser. If a browser supports multiple transform styles, 3D
+will be prefered to 2D, and 2D will be prefered to filter transforms.
 
   <table class="zebra-striped">
     <thead>
@@ -168,8 +168,8 @@ and outlines the ways in which it solves them.
 #### Cross Browser Support
 
   Transforms have yet to be adopted by all the major browser vendors as
-non-proprietary CSS properties. This means that to apply a 10x10 px
-translation to an element involves 5 properties: 
+non-proprietary CSS properties. Therefore, to apply a 10x10 pixel translation 
+to an element involves setting 5 properties: 
     
   <javascript>
     $('#test').css({
@@ -182,7 +182,7 @@ translation to an element involves 5 properties:
   </javascript>
 
   Clearly, setting that property as a string and maintaining it is
-prohibitively expensive, and most people don't even bother with Mozilla, 
+very clumsy, and most people don't even bother with Mozilla, 
 Opera, and IE support.  
 
 #### Multiple Transforms
@@ -237,5 +237,34 @@ in-memory matrix which it uses to apply the transforms. This
 single-entry system ensures that all parts of your applications that
 want to apply a transformation to an element can do so without any
 regard to what other transformations have already been applied.
+
+## License
+
+
+  <javascript>
+    Copyright (c) 2011 Strobe Inc.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+  </javascript>
+    
+
+
+---
 
 [Back to top](#)
