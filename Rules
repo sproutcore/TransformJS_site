@@ -77,6 +77,12 @@ end
 compile '/images/*' do
 end
 
+compile '/javascript/*' do
+end
+
+compile '/html/*' do
+end
+
 filters = {
   :markdown => :kramdown
 }
@@ -88,7 +94,7 @@ compile '*' do
 end
 
 route '*' do
-  if item.binary? || item[:extension] == 'css'
+  if item.binary? || item[:extension] == 'html' || item[:extension] == 'js' || item[:extension] == 'css'
     # /foo/ -> /foo.ext
     item.identifier.chop + '.' + item[:extension]
   else
