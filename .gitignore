@@ -7,3 +7,5 @@
 /rdoc
 /spec/sandbox
 Gemfile.lock
+output
+tmp
