@@ -404,7 +404,7 @@ address {
   -webkit-transition: 0.1s linear all;
   -moz-transition: 0.1s linear all;
   transition: 0.1s linear all;
-  margin: 5px;
+  margin: 5px 0;
 }
 .btn:hover {
   background-position: 0 -15px;
@@ -585,4 +585,8 @@ code {
 #demobox img {
   width: 100%;
   margin-top:50px;
+}
+
+#demobox button {
+  width: 100%;
 }
