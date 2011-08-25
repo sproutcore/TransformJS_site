@@ -34,9 +34,9 @@ behavior or have suggestions for improving the API, please let us know.
             translateX:'-=150',
             translateY:'+=150',
             scale:'+=2',
-            rotateY: '+=6.24',
-            rotateX: '+=3.15',
-            rotateZ: '+=3.15'
+            rotateY: '+='+(2*Math.PI),
+            rotateX: '+='+Math.PI,
+            rotateZ: '+='+Math.PI
           },1500);    
         });  
 
@@ -45,9 +45,9 @@ behavior or have suggestions for improving the API, please let us know.
             translateX:'+=150',
             translateY:'-=150',
             scale:'-=2',
-            rotateY: '-=6.24',
-            rotateX: '-=3.15',
-            rotateZ: '-=3.15'
+            rotateY: '-='+(2*Math.PI),
+            rotateX: '-='+Math.PI,
+            rotateZ: '-='+Math.PI
           },1500);
         })
       });
@@ -84,9 +84,9 @@ and animate the changes:
     $('#test').animate({
       translateY:'+=150',
       scale:'+=2',
-      rotateY: '+=6.24',
-      rotateX: '+=3.15',
-      rotateZ: '+=3.15'
+      rotateY: '+='+(2*Math.PI),
+      rotateX: '+='+Math.PI,
+      rotateZ: '+='+Math.PI
     },1500);    
   </javascript>
 
