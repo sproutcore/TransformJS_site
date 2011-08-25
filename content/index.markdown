@@ -1,5 +1,5 @@
 ---
-title: TransformJS - 3D and 2D Transforms
+title: TransformJS - 3D and 2D Transforms for jQuery
 ---
 
 # TransformJS 1.0 Beta
